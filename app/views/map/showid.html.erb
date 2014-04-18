@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyH6_rxueEsjg0nKXAN23lhziVfY1rirU&sensor=false"></script>
+  <script>
+$( document ).ready(function() {    
+<% @results.find do |r| %>
+  var map;
+    function initialize() {
+    var mapOptions = {
+    zoom: 17,
+    center: new google.maps.LatLng(<%= r.location.lat %>, <%= r.location.lng %>)
+  };
+  
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading"><%= @venue.display_name %></h3>'+      
+      '<div id="bodyContent">'+
+      '<address><small><%= @venue.street %><br>' +
+      '<%= @venue.metro_area.display_name %>, <%= @venue.metro_area.state %><br>' +
+      '<%= @venue.zip %><br>' +
+      '<span class="glyphicon glyphicon-earphone"></span> <%= @venue.phone %></small></address>' +      
+      '</div>'+
+      '</div>';
+
+  var myinfowindow = new google.maps.InfoWindow({
+      content: contentString,
+      maxWidth: 300
+  });
+
+
+  var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(<%= r.location.lat %>, <%= r.location.lng %>),
+      map: map,
+      title: '<%= r.venue.display_name %>',
+      animation: google.maps.Animation.DROP,
+      infowindow: myinfowindow
+  });
+
+      console.log(marker);
+
+google.maps.event.addListener(marker, 'click', function() {
+    this.infowindow.open(map, this);
+  });
+}
+         
+google.maps.event.addDomListener(window, 'load', initialize);
+<% end %>
+});   
+</script>
+</head>
+  <body>
+    <div class="row">
+
+       <div class="col-sm-6">   
+         <div class="panel panel-default">
+         <div class="panel-body">
+         
+         <div class="row">
+         
+            <div class="col-sm-6">
+           <h3><strong><a href='<%= @venue.website %>' style="text-decoration:none" target="_blank"><%= @venue.display_name.titleize %></a></strong></h3>
+          <address>
+         <small><%= @venue.street %><br>
+         <%= @venue.metro_area.display_name %>, <%= @venue.metro_area.state %><br>
+         <%= @venue.zip %><br>
+         <% unless @venue.phone == nil %>
+         <span class="glyphicon glyphicon-earphone"></span> <%= @venue.phone %></small>
+         </address>
+          <br>    
+         <% end %>
+           </div>
+        
+          <div class="col-sm-6">
+            <br>
+           <div id="map-canvas"></div>
+           </div>
+           <br>
+           </div>
+           
+             <% unless @venue.description == nil %>
+          <br>
+           <em><p><%= @venue.description %></p></em>
+           <% end %>
+         
+        </div>
+           
+          </div>
+         </div>           
+      
+       <div class="col-sm-6">
+         <h3><strong>Recent Instagrams</strong> <span style="color: #5bc0de"><em>#<%= @name %></em></span></h3>
+         <% @images.each do |i|%>
+         <a href="<%= i.link %>" target="blank" ><img src="<%= i.images.thumbnail.url %>" class="instagram-side thumbnail" style="display:inline"></a>
+         <% end %>
+        
+        <h3><strong>Upcoming Events</strong></h3>
+         <br>
+        <% @results.each do |r| %>
+         <div class="panel panel-default">
+         <div class="panel-body events-panel">
+        <!--<strong><%= r.start.to_formatted_s(:long_ordinal)  %></strong>-->
+          <p class="lead"><%= r.display_name.titleize %><br></p>
+           <button class="btn btn-sm pull-right" style="margin-left:5px; color: white; background-color: #df691a"><a href="<%= r.uri %>" style="color:white" target="_blank">Buy Tickets</a></button>
+           <button class="btn btn-sm pull-right" style="background-color: #46b8da; color: white"><a href="/save/<%= r.id %>" style="color:white">Save</a></button>
+        </div>
+         </div>
+        <% end %>
+      </div>
+    
+    </div>
+      
+       <script>
+    $( document ).ready(function() {
+    $('a.marker-link').click(function() { console.log($(this).data('id')) });
+      event.preventDefault();
+    });
+    </script>
+</body>
+</html>

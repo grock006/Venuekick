@@ -1,0 +1,17 @@
+<div class="row">
+<div class="col-sm-8">	
+
+<h1><%= current_user.name %>'s Concerts</h1>
+
+<% @concerts.each do |a| %>
+<div class="panel panel-default">
+<div class="panel-body events-panel">
+<button type="button" class="close" aria-hidden="true"><a href="destroy/<%= a.id %>" method="delete" style="color: white">&times;</a></button>
+<p><strong><%= a.name %></strong></p>
+<button class="btn btn-sm" style="margin-left:5px; color: white; background-color: #df691a"><a href="<%= a.uri %>">Buy Tickets</a></button>
+</div>
+</div>
+<% end %>
+</div>
+<div class="col-sm-4"></div>
+</div>

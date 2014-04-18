@@ -1,0 +1,141 @@
+/* / Body Styles ////////////////////// */
+html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+#wrapper {
+   background-color: #4E5D6C;
+    /*#efe9e4;*/
+}
+footer { 
+   padding-bottom: 50px;
+   color: black;
+}
+.col-sm-6 div.row {
+  margin-top: 0;
+}
+/*// Map Styles //////////////////////*/
+#map-canvas {
+      height: 400px;
+}
+.col-sm-6 #map-canvas {
+    height: 200px;
+    margin-right: 40px;
+    padding-left: 0;
+    border-radius: 5px;
+}
+.col-sm-7 #map-canvas {
+  border: 3px solid #333;
+  border-radius: 5px;
+  height: 600px;
+}
+.col-sm-7 {
+  margin-top: 20px;
+}
+.col-sm-7 #map-canvas address p {
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+.row {
+      margin-top: 50px;
+}
+.calendar-box {
+  max-height: 500px;
+}
+/*// Instagram Image Styles /////////*/
+.image-instagram {
+  width: 8%;
+}
+.col-sm-12 .thumbnail {
+  /*border: 5px solid black;*/
+  background-color: #4E5D6C;
+  padding: 0;
+  border: 1px solid #4E5D6C;
+}
+.instagram-side {
+   width: 15%;
+}
+/*// Button Styles //////////////////*/
+button a, button a:hover {
+  color: white;
+  text-decoration: none;
+  margin-left: 5px!important;
+}
+button.super {
+  background-image: #ba5816!important;
+  color: #ebebeb;
+}
+/*// Navbar Styles ////////////////*/
+a.navbar-brand {
+  font-size: 40px;
+  color: #ebebeb;
+  margin-left: 5px;
+}
+.navbar {
+  padding: 10px;
+}
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+.navbar-form .form-control {
+  width: 300px;
+}
+body {
+  background-color: #efe9e4;
+}
+.navbar li a {
+  font-weight: bold;
+}
+/* Div Styles ///////////////////////////*/
+.panel-body {
+  border: 3px solid #4e5d6c;
+  border-radius: 5px;
+  background-color: #4e5d6c;
+}
+.panel-body em {
+  color: #ebebeb;
+}
+.panel {
+  background-color: #4e5d6c;
+}
+p.lead {
+  line-height: 1.2;
+  color: #ebebeb;
+}
+.col-sm-6 address {
+  line-height: 1.2;
+  margin-bottom: 0;
+  color: #ebebeb;
+}
+.col-sm-6 h3 {
+  margin-bottom: 2px;
+}
+/* Text Styles ////////////////////////// */
+.col-sm-6 h3, .col-sm-7 h3, .col-sm-5 h3, .col-sm-5 h5 {
+  color: #ebebeb;
+}
+.col-sm-6 a, .col-sm-5 a {
+  color: #5bc0de;
+}
+.col-sm-6 a:hover, .col-sm-5 a:hover {
+  color: #ebebeb;
+}
+.col-sm-8 h1 {
+  color: #df691a;
+}
+.col-sm-8 label {
+  color: #ebebeb;
+}
+.col-sm-8 p {
+  color: #ebebeb;
+}
+.col-sm-8 button a {
+  color: #ebebeb;
+}
+.col-sm-12 .alert-info {
+  color: white;
+  background-color: #df691a;
+  background-image: none;
+  border-color: none;
+}
