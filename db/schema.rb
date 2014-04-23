@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140423051441) do
+ActiveRecord::Schema.define(version: 20140423053304) do
 
   create_table "concerts", force: true do |t|
     t.string   "name"
     t.string   "venue"
     t.string   "time"
     t.string   "uri"
-    t.integer  "user_id",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "save_id"
