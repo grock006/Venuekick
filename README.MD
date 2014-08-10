@@ -1,6 +1,7 @@
 Venuekick
 =========
 
+
 <em>Use Venuekick to search for concert venues and music listings by city.</em>
 
 Venuekick is a web application project created with Ruby on Rails, which utilizes the <a href-"http://www.songkick.com/developer">Songkick API</a> through the <a href="https://github.com/jrmehle/songkickr">Songkickr Gem</a> to search for concert venues by city. 
