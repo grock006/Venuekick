@@ -1,4 +1,4 @@
-<h1>Venuekick</h1>
+=Venuekick
 =========
 
 <em>Use Venuekick to search for concert venues and music listings by city.</em>
