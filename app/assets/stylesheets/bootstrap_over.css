@@ -47,6 +47,9 @@ footer {
 .image-instagram {
   width: 8%;
 }
+.col-sm-12 .thumbnail a:hover {
+  opacity: 0.5;
+}
 .col-sm-12 .thumbnail {
   /*border: 5px solid black;*/
   background-color: #4E5D6C;
@@ -56,6 +59,7 @@ footer {
 .instagram-side {
    width: 15%;
 }
+
 /*// Button Styles //////////////////*/
 button a, button a:hover {
   color: white;
@@ -86,6 +90,9 @@ body {
 }
 .navbar li a {
   font-weight: bold;
+}
+.navbar img {
+  width: 20%;
 }
 /* Div Styles ///////////////////////////*/
 .panel-body {

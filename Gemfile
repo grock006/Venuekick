@@ -56,3 +56,6 @@ gem 'songkickr'
 
 # gem instagram
 gem 'instagram'
+
+#gem google places autocomplete
+gem 'google_places_autocomplete'
