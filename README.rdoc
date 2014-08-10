@@ -3,11 +3,11 @@
 
 <em>Venuekick is a Ruby on Rails Web Application which searches for concert venues and music listings by city using the Songkick API.</em>
 
-Venuekick is a web application project created with Ruby on Rails, which utilizes the [Songkick API](http://www.songkick.com/developer) through the <a href="https://github.com/jrmehle/songkickr">Songkickr Gem</a> to search for concert venues by city. 
+Venuekick is a web application project created with Ruby on Rails, which utilizes the Songkick API through the Songkickr Gem to search for concert venues by city. 
 
-Venuekick pulls langitude and longitude coordinates of all the city's concert venues and plots them on a Google Map. Upcoming concert listings (for artists/bands/performers) are listed beside each individual venue. Search form uses the ruby wrapper for <a href="https://github.com/phuphighter/google_places_autocomplete">Google Places Autocomplete<a>. 
+Venuekick pulls langitude and longitude coordinates of all the city's concert venues and plots them on a Google Map. Upcoming concert listings (for artists/bands/performers) are listed beside each individual venue. Search form uses the ruby wrapper for Google Places Autocomplete. 
 
-The homepage pulls Instagram images using the <a href="https://github.com/Instagram/instagram-ruby-gem">Instagram gem</a> by searching results for "concertjunkie" and "concertphotography." Pages for each individual concert venue (Ex: Troubadour, Los Angeles, CA) searches Instagram images by venue name.
+The homepage pulls Instagram images using the Instagram gem by searching results for "concertjunkie" and "concertphotography." Pages for each individual concert venue (Ex: Troubadour, Los Angeles, CA) searches Instagram images by venue name.
 
 Copyright 2014 Greg Rock
 
